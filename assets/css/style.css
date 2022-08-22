@@ -8,7 +8,7 @@ html {
   font-size: 62.5%;
 }
 
-body {;
+body {
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 2rem;
 }
@@ -22,7 +22,6 @@ header {
 }
 
 main {
-  /* display: flex; */
   text-align: center;
 }
 
@@ -39,13 +38,26 @@ p {
 
 .pg1-buttons {
   display: flex;
-  flex-direction:
+  flex-direction: column;
+  max-width: 30%;
+  margin-left:30%;
+  margin-top: 1rem;
+}
+
+#box1, #box2, #box3, #box4 {
+  display: flex;
+  padding: 1rem;
+  border: .2rem solid rgb(0, 0, 0);
+  margin: 1rem;
+  border-radius: 1.5rem;
+  color: white;
+  background-color: purple;
 }
 
 #box1:hover,
 #box2:hover,
 #box3:hover,
 #box4:hover {
-  color: purple;
-  box-shadow: 0 .5rem 1.5rem rgba(145, 92, 184, .4);
+  color: rgb(255, 255, 255);
+  box-shadow: 0 1rem 1.5rem rgba(120, 92, 141, 0.4);
 }
