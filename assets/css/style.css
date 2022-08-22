@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -10,6 +14,8 @@ body {
 header {
   display: flex;
   justify-content: space-between;
+  height: 6rem;
+  line-height: 6rem;
 }
 
 main {
