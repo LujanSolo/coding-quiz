@@ -42,7 +42,10 @@ p {
   flex-direction:
 }
 
-#box1:hover {
+#box1:hover,
+#box2:hover,
+#box3:hover,
+#box4:hover {
   color: purple;
   box-shadow: 0 .5rem 1.5rem rgba(145, 92, 184, .4);
 }
