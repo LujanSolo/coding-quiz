@@ -25,3 +25,8 @@ main {
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.pg1-answer1:hover {
+  color: purple;
+  box-shadow: 0 .5rem 1.5rem rgba(145, 92, 184, .4);
+}

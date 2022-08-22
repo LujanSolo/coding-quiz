@@ -7,6 +7,7 @@
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css"/>
   <title>Coding Quiz</title>
 </head>
+
 <body>
   <!-- header should be FIXED -->
   <header>
@@ -19,14 +20,23 @@
   </header>
 
   <main>
-
     <!-- OPENING PAGE w/ greeting and START QUIZ button -->
-    <section>
-      <h1>A Coder's Quiz</h1>
-      <h2>Test your JavaScript knowledge!</h1>
-      <button class="start-button">START!</button>
-      <p>To play, press the START button and answer as many questions as you are able before the timer reaches zero. Be quick, but don't hurry, as incorrect answers will take 10 seconds off of the timer!</p>
-    </section>
+  <section class="intro">
+    <h1>A Coder's Quiz</h1>
+    <h2>Test your JavaScript knowledge!</h1>
+    <button class="start-button">START!</button>
+    <p>To play, press the START button and answer as many questions as you are able before the timer reaches zero. Be quick, but don't hurry, as incorrect answers will take 10 seconds off of the timer!</p>
+  </section>
+
+  <section class="pg1-buttons">
+    <div class="pg1-answer1"> id="box1"></div>
+    <div class="pg1-answer2"> id="box2"></div>
+    <div class="pg1-answer3"> id="box3"></div>
+    <div class="pg1-answer4"> id="box4"></div>
+  </section>
+  
+
   </main>
+  <script src="assets/javascript/script.js"></script>
 </body>
 </html>
