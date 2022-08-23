@@ -7,22 +7,24 @@
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css"/>
   <title>Coding Quiz</title>
 </head>
+
 <!-- HEADER with link to HIGH SCORES and a TIMER with a 60 seconds default start time -->
 <body>
   <header>
     <div><a href="#">High Scores</a></div>
     <div>Time: <span id="timer">60</span></div>
   </header>
-<!-- Welcome section with rules and START button -->
-  <section class="start-screen">
-    <h1>JavaScript Coding Quiz</h1>
-    <div class="instructions">
+
+<!-- Welcome section with Title, Rules and START button -->
+  <main>
+    <section class="start-screen">
+      <h1>JavaScript Coding Quiz</h1>
       <p>To play, press the START button and answer as many questions as you are able before the timer reaches zero. Be quick, but don't hurry, as incorrect answers will take 10 seconds off of the timer!</p>
-    </div>
-    <div class="start-button"> 
-      <button>START!</button>
+      <div class="start-button"> 
+      <button id="start" class="btn" onclick="startGame"()>START!</button>
     </div>
   </section>
+
 <!-- below, fix buttons on css so they align under (on "next page" of quiz)~ -->
   <section class="pg1-buttons">
     <button class="pg1-answer1" id="box1">TESTING</button>
