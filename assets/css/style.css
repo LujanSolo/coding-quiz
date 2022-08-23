@@ -36,14 +36,8 @@ main {
 
 p {
   display: flex;
-  padding: 5rem;
   text-align: center;
-}
-
-.start-button,
-.btn submit-button {
-  display: flex;
-  justify-content: center;
+  padding: .5rem;
 }
 
 /* revisit section below for final formatting */
@@ -54,15 +48,16 @@ p {
   align-items: center;
 }
 
-#questionsBox {
+#quizBox {
   justify-content: center;
   align-items: center;
   display: flex;
   flex-direction: column;
-  max-width: 50%;
+  max-width: 100%;
   margin-top: 1rem;
 }
 
+.choice,
 .btn { 
   display: flex;
   border: .2rem solid rgb(0, 0, 0);
@@ -71,6 +66,8 @@ p {
   font-size: larger;
   color: white;
   background-color: rgb(27, 2, 127);
+  padding: 1rem;
+  justify-content: center;
 }
 
 .btn:hover {
