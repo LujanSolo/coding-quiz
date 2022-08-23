@@ -30,7 +30,6 @@ main {
   justify-content: center;
   align-items: center;
   width: 50rem;
-  max-width: 75%;
   padding: 1.5rem;
   text-align: center;
 }
@@ -41,28 +40,40 @@ p {
   text-align: center;
 }
 
+.start-button,
+.btn submit-button {
+  display: flex;
+  justify-content: center;
+}
+
+/* revisit section below for final formatting */
+#resultsBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 #questionsBox {
+  justify-content: center;
+  align-items: center;
   display: flex;
   flex-direction: column;
   max-width: 50%;
-  margin-left:10%;
   margin-top: 1rem;
 }
 
-#answer-A, #answer-B, #answer-C, #answer-D { 
+.btn { 
   display: flex;
-  padding: .5rem;
   border: .2rem solid rgb(0, 0, 0);
   margin: .25rem;
   border-radius: 1rem;
+  font-size: larger;
   color: white;
   background-color: rgb(27, 2, 127);
 }
 
-#answer-A:hover,
-#answer-B:hover,
-#answer-C:hover,
-#answer-D:hover {
+.btn:hover {
   color: rgb(255, 255, 255);
   box-shadow: 0 1rem .5rem rgba(120, 92, 141, 0.4);
   background-color: blueviolet;
