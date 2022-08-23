@@ -41,14 +41,14 @@ p {
 }
 
 /* revisit section below for final formatting */
-#resultsBox {
+#result {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-#quizBox {
+#quiz {
   justify-content: center;
   align-items: center;
   display: flex;
