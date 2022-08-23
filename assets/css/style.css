@@ -41,33 +41,29 @@ p {
   text-align: center;
 }
 
-.start-button {
-  display: flex;
-  justify-content: center;
-}
-
-.pg1-buttons {
+#questionsBox {
   display: flex;
   flex-direction: column;
-  max-width: 30%;
-  margin-left:30%;
+  max-width: 50%;
+  margin-left:10%;
   margin-top: 1rem;
 }
 
-#box1, #box2, #box3, #box4 {
+#answer-A, #answer-B, #answer-C, #answer-D { 
   display: flex;
-  padding: 1rem;
+  padding: .5rem;
   border: .2rem solid rgb(0, 0, 0);
-  margin: 1rem;
-  border-radius: 1.5rem;
+  margin: .25rem;
+  border-radius: 1rem;
   color: white;
-  background-color: purple;
+  background-color: rgb(27, 2, 127);
 }
 
-#box1:hover,
-#box2:hover,
-#box3:hover,
-#box4:hover {
+#answer-A:hover,
+#answer-B:hover,
+#answer-C:hover,
+#answer-D:hover {
   color: rgb(255, 255, 255);
-  box-shadow: 0 1rem 1.5rem rgba(120, 92, 141, 0.4);
+  box-shadow: 0 1rem .5rem rgba(120, 92, 141, 0.4);
+  background-color: blueviolet;
 }
