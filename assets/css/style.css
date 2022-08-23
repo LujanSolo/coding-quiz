@@ -58,7 +58,8 @@ p {
 }
 
 .choice,
-.btn { 
+.btn,
+.submitButton { 
   display: flex;
   border: .2rem solid rgb(0, 0, 0);
   margin: .25rem;
