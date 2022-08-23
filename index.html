@@ -25,14 +25,20 @@
     </div>
   </section>
 
-<!-- below, fix buttons on css so they align under (on "next page" of quiz)~ -->
-  <section class="pg1-buttons">
-    <button class="pg1-answer1" id="box1">TESTING</button>
-    <button class="pg1-answer2" id="box2">TESTING</button>
-    <button class="pg1-answer3" id="box3">TESTING</button>
-    <button class="pg1-answer4" id="box4">TESTING</button>
+<!-- Section for Quiz Questions and possible ANSWERS-->
+  <section id="questionsBox">
+    <h2 id="question"></h2>
+    <button id="answer-A" class="btn" onclick="handleAnswerClick(event)"></button>
+    <button id="answer-B" class="btn" onclick="handleAnswerClick(event)"></button>
+    <button id="answer-C" class="btn" onclick="handleAnswerClick(event)"></button>
+    <button id="answer-D" class="btn" onclick="handleAnswerClick(event)"></button>
   </section>
-  
+
+  <!-- SECTION for RESULTS CONTAINER  and userEntry of INITIALS for scorekeeping-->
+  <section id="resultsBox">
+    <h2>All done!</h2>
+    <p>You final score is <span id="final-score"></span></p>  
+  </section>
 
   </main>
   <script src="assets/javascript/script.js"></script>
