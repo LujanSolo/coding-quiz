@@ -20,22 +20,22 @@
     <div class="start-screen">
       <h1>JavaScript Coding Quiz</h1>
       <p>To play, press the START button and answer as many questions as you are able before the timer reaches zero. Be quick, but don't hurry, as incorrect answers will take 10 seconds off of the timer!<p>
-      <div class="btn" onclick="startGame"()>START!</button>
+      <div id="start" class="btn" onclick="startGame"()>START!</button>
     </div>
 
 <!-- Section for Quiz Questions and possible ANSWERS-->
-  <div id="quizBox" >
+  <div id="quizBox" style = "display : none;">
     <div id="question">
       <p>QUESTION FILLER</p>
     </div>
-    <button id="A" class="choice" onclick="handleAnswerClick(event)">FILLER TEXT FOR NOW</button>
-    <button id="B" class="choice" onclick="handleAnswerClick(event)">FILLER TEXT FOR NOW</button>
-    <button id="C" class="choice" onclick="handleAnswerClick(event)">FILLER TEXT FOR NOW</button>
-    <button id="D" class="choice" onclick="handleAnswerClick(event)">FILLER TEXT FOR NOW</button>
+    <button id="A" class="choice" onclick="handleAnswerClick(event)">1.</button>
+    <button id="B" class="choice" onclick="handleAnswerClick(event)">2.</button>
+    <button id="C" class="choice" onclick="handleAnswerClick(event)">3.</button>
+    <button id="D" class="choice" onclick="handleAnswerClick(event)">4.</button>
   </div>
 
   <!-- SECTION for RESULTS CONTAINER , userEntry of INITIALS for scorekeeping, and SUBMIT (to highscores) BUTTON-->
-  <section id="resultsBox">
+  <section id="resultsBox" style = "display : none;">
     <h2>All done!</h2>
     <p>You final score is <span id="final-score"></span></p>
     <button id="submit-score" class="btn submit-button" onclick="handleSubmit()">Submit Your Score</button>
