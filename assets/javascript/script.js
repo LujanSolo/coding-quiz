@@ -4,24 +4,71 @@ var quiz = document.getElementById("quiz");
 var results = document.getElementById("results");
 var submitButton= document.getElementById("submitButton");
 
-var answerA = document.getElementById("A");
-var answerB = document.getElementById("B");
-var answerC = document.getElementById("C");
-var answerD = document.getElementById("D");
+var choice1 = document.getElementById("1");
+var choice2 = document.getElementById("2");
+var choice3 = document.getElementById("3");
+var choice4 = document.getElementById("4");
 
 var timer = document.getElementById("timer");
 
+var scoreContainer = getElementById("scoreContainer")
 //possible querySelectors:
 var userInitials = document.querySelector("#userInitials");
 
 // an array for the questions
-var questions = [
-  "Commonly used data types do NOT include:",
-  "The condition in an if / else statement is enclosed in __________.",
-  "Arrays in JavaScript can be used to store __________.",
-  "A very useful tool used during development and debugging for printing content to the debugger is:",
-  "String values must be enclosed within ___________ when being assigned to variables."
-];
+var quizQuestions = [  
+  {
+    question: "Commonly used data types do NOT include:",
+    answers: {
+      1: "strings",
+      2: "booleans",
+      3: "alerts",
+      4: "numbers",
+    },
+    correctAnswer: "3"
+  },
+  {
+    question: "The condition in an if / else statement is enclosed in __________.",
+    answers: {
+      1: "quotes",
+      2: "curly brackets",
+      3: "parentheses",
+      4: "square brackets",
+    },
+    correctAnswer: "2"
+  },
+  {
+    question: "Arrays in JavaScript can be used to store __________.",
+    answers: {
+      1: "numbers and strings",
+      2: "other arrays",
+      3: "booleans",
+      4: "all of the above",
+    },
+    correctAnswer: "4"
+  },
+  {
+    question: "Who invented JavaScript?",
+    answers: {
+      1: "Theodore Mojava",
+      2: "Brandon Eich",
+      3: "Thomas Anderson",
+      4: "artificial intelligence",
+    },
+    correctAnswer: "2"
+  },
+  {
+    question: "String values must be enclosed within ___________ when being assigned to variables.",
+    answers: {
+      1: "commas",
+      2: "curly brackets",
+      3: "quotes",
+      4: "parentheses",
+    },
+    correctAnswer: "3"
+  }
+]
+
 
 //POSSIBLE FUNCTIONS
 
@@ -29,10 +76,24 @@ function startGame(){}
 
 function showResults(){}
 
+buildQuiz();
 // submit button to go to results screen
 submitButton.addEventListener('click', showResults);
 
+function buildQuiz(){
+//variable to hold questions and answers depending on quiz block
+var htmlOutput = [];
 
+// need  variables to hold questionIndex to keep track of on what quesiton the user is currently
+
+
+
+
+
+
+
+
+}
 
 
 

@@ -12,12 +12,12 @@
 <body>
   <header>
     <div><a href="#">High Scores</a></div>
-    <div>Time: <span id="timer">60</span></div>
+    <div>Time: <span id="timer"></span></div>
   </header>
 
 <!-- Welcome section with Title, Rules and START button -->
   <main>
-    <div class="welcome">
+    <div class="welcome" >
       <div class="start-screen">
       <h1>JavaScript Coding Quiz</h1>
       <p>To play, press the START button and answer as many questions as you are able before the timer reaches zero. Be quick, but don't hurry, as incorrect answers will take 10 seconds off of the timer!<p>
@@ -26,24 +26,25 @@
       </div>
     </div>
 
-<!-- div for Quiz Questions and possible ANSWERS-->
-  <div id="quiz">
-    <div id="questions">
-      <h2>QUESTION FILLER</h2>
+<!-- div window for Quiz Questions and Answers-->
+  <div id="quiz" style="display:none;">
+    <div id="question"><h2>QUESTION</h2>
     </div>
-    <button id="A" class="choice" onclick="handleAnswerClick(event)">1.</button>
-    <button id="B" class="choice" onclick="handleAnswerClick(event)">2.</button>
-    <button id="C" class="choice" onclick="handleAnswerClick(event)">3.</button>
-    <button id="D" class="choice" onclick="handleAnswerClick(event)">4.</button>
+      <div class="choices">
+        <button id="1" class="choice" onclick="handleAnswerClick('1')">1.</button>
+        <button id="2" class="choice" onclick="handleAnswerClick('2')">2.</button>
+        <button id="3" class="choice" onclick="handleAnswerClick('3')">3.</button>
+        <button id="4" class="choice" onclick="handleAnswerClick('4')">4.</button>
+      </div>  
   </div>
 
   <!-- div for RESULTS CONTAINER , userEntry of INITIALS for scorekeeping, and SUBMIT (to highscores) BUTTON-->
   <div id="results">
-    <div id="resultContents"></div>
+    <div id="scoreContainer"></div>
       <h1>All done!</h1>
     <form>
       <h2>Your final score is <span id="finalScore"></span></h2>
-      <p>Enter your initials:</p>
+      <p>Enter initials:</p>
       <input placeholder="your initials" id="userInitials" />
       <button class="btn" id ="submitButton">Submit!</button>
     </form>
