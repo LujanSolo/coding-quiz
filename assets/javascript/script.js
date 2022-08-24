@@ -108,7 +108,27 @@ const questionsIndex = [
   },
 ]
 
+//a function to show each  QUESTION and each ANSWER CHOICE
+function showQuestions(questions, questionContainer){
+  //array for output, first ? to be replaced with next
+  var output = [];
+  var answers;
+  questionEl.innerText = questionsIndex[questionIndex].question;
+  for(var i=0; i < questionsIndex[questionIndex].answers.length; i++) {
+    var btn = document.createElement("button");
+    btn.innerText = questionsIndex[questionIndex].answers[i].text;
+    btn.dataset.correct=questionsIndex[questionIndex].answers[i].correct;
+    btn.onclick = test;
+    answerButtonsEl.appendChild(btn)
+  }
+}
 
+function test(event) {
+  console.log(event.target);
+  // comparing if it is correct or incorrect
+  // increasing quesiotnindex
+  // call showQuestions
+}
 
 
 
