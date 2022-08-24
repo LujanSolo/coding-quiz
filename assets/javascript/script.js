@@ -86,15 +86,21 @@ var htmlOutput = [];
 
 // need  variable to tell computer when the game is out of questions, or MaxQuestions or something
 
-var lastQuestionIndex = questions.length - 1;
+var lastQuestionIndex = quizQuestions.length - 1;
 
 //index for keeping track of what question user is currently answering
 var currentQuestionIndex = 0;
 
-//need functions for presenting the questions to the user
+//need functions for presenting the questions to the user, TOGGLE display:none
 
-function runQuestions(){
-  
+function runQuestions() {
+  //the question
+  question.innerHTML =  "<p>" + quizQuestions[currentQuestionIndex]  + "</p>";
+  //the answer choices
+  choice1.innerHTML = quizQuestions[currentQuestionIndex].choice1;
+  choice2.innerHTML = quizQuestions[currentQuestionIndex].choice2;
+  choice3.innerHTML = quizQuestions[currentQuestionIndex].choice3;
+  choice4.innerHTML = quizQuestions[currentQuestionIndex].choice4;
 }
 
 
