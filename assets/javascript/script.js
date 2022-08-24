@@ -1,27 +1,32 @@
 // possible variables to get by ID 
-var start = document.getElementById("start");
-var quiz = document.getElementById("quiz");
-var results = document.getElementById("results");
-var submitButton= document.getElementById("submitButton");
+var start = document.getElementById("start")
+var quiz = document.getElementById("quiz")
+var results = document.getElementById("results")
+var submitButton= document.getElementById("submitButton")
 
-var choice1 = document.getElementById("1");
-var choice2 = document.getElementById("2");
-var choice3 = document.getElementById("3");
-var choice4 = document.getElementById("4");
+var choice1 = document.getElementById("1")
+var choice2 = document.getElementById("2")
+var choice3 = document.getElementById("3")
+var choice4 = document.getElementById("4")
 
 
 
 //BUILD TIMER
-var time = 60;
-var countdown = document.getElementById("countdown");
-setInterval()
+const startingSeconds = 60;
+var time = startingSeconds;
+
+var countdownEl = document.getElementById("countdown");
+
+setInterval(updateCountdown, 1000);
+
 function updateCountdown() {
-  var seconds = startTime % 60;
-  timerEl.innerHTML = (seconds);
+  var seconds = time % 60;
+  countdownEl.innerHTML = (seconds);
   time--;
 }
 
-var scoreContainer = getElementById("scoreContainer")
+
+var scoreContainer = getElementById("results")
 //possible querySelectors:
 var userInitials = document.querySelector("#userInitials");
 
