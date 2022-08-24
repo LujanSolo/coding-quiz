@@ -20,14 +20,14 @@
     <div class="welcome" >
       <div class="start-screen">
       <h1>JavaScript Coding Quiz</h1>
-      <p>To play, press the START button and answer as many questions as you are able before the timer reaches zero. Be quick, but don't hurry, as incorrect answers will take 10 seconds off of the timer!<p>
+      <p>To play, press the START button and answer as many questions as you are able before the timer reaches zero. Be quick, but don't hurry, as incorrect answers will deduct 10 seconds from the timer!<p>
       <div id="start" class="btn" onclick="startGame"()>START!</button>
       </div>
       </div>
     </div>
 
 <!-- div window for Quiz Questions and Answers-->
-  <div id="quiz" >
+  <div id="quiz" style="display: none;">
     <div id="question"><p></p>
     </div>
       <div class="choices">
@@ -39,7 +39,7 @@
   </div>
 
   <!-- div for RESULTS CONTAINER , userEntry of INITIALS for scorekeeping, and SUBMIT (to highscores) BUTTON-->
-  <div id="results">
+  <div id="results" style="display: none;">
     <div id="scoreContainer"></div>
       <h1>All done!</h1>
     <form>
