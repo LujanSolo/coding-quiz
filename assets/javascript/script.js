@@ -84,12 +84,12 @@ function buildQuiz(){
 //variable to hold questions and answers depending on quiz block
 var htmlOutput = [];
 
-// need  variables to hold questionIndex to keep track of on what quesiton the user is currently
+// need  variable to tell computer when the game is out of questions, or MaxQuestions or something
 
+var lastQuestionIndex = questions.length - 1;
 
-
-
-
+//index for keeping track of what question user is currently answering
+var runningQuestionIndex = 0;
 
 
 
