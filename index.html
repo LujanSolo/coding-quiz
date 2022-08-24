@@ -17,24 +17,24 @@
 
 <!-- Welcome section with Title, Rules and START button -->
   <main>
-    <div class="welcome" >
-      <div class="start-screen">
-      <h1>JavaScript Coding Quiz</h1>
-      <p>To play, press the START button and answer as many questions as you are able before the timer reaches zero. Be quick, but don't hurry, as incorrect answers will deduct 10 seconds from the timer!<p>
-      <div id="start" class="btn" onclick="startGame"()>START!</button>
-      </div>
+    <div>
+      <div id="welcome">
+        <h1>JavaScript Coding Quiz</h1>
+          <p>To play, press the START button and answer as many questions as you are able before the timer reaches zero. Be quick, but don't hurry, as incorrect answers will deduct 10 seconds from the timer!<p>
+        <div id="start" class="btn" onclick="startGame"()>START!</button>
+        </div>
       </div>
     </div>
 
 <!-- div window for Quiz Questions and Answers-->
   <div id="quiz" style="display: none;">
-    <div id="question"><p></p>
+    <div id="questions"><p></p>
     </div>
       <div class="choices">
-        <button id="1" class="choice" onclick="handleAnswerClick('1')">1.</button>
-        <button id="2" class="choice" onclick="handleAnswerClick('2')">2.</button>
-        <button id="3" class="choice" onclick="handleAnswerClick('3')">3.</button>
-        <button id="4" class="choice" onclick="handleAnswerClick('4')">4.</button>
+        <button id="1" class="choice" onclick="handleAnswerClick('1')"></button>
+        <button id="2" class="choice" onclick="handleAnswerClick('2')"></button>
+        <button id="3" class="choice" onclick="handleAnswerClick('3')"></button>
+        <button id="4" class="choice" onclick="handleAnswerClick('4')"></button>
       </div>  
   </div>
 

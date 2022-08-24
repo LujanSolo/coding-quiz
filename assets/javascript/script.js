@@ -10,16 +10,15 @@ var choice3 = document.getElementById("3")
 var choice4 = document.getElementById("4")
 
 var scoreContainer = document.getElementById("results")
-//possible querySelectors:
+
 var userInitials = document.querySelector("#userInitials");
 
-//POSSIBLE FUNCTIONS
 
 // START GAME FUNCTION
 start.addEventListener("click", startGame);
 
 function startGame(){
-  start.style.display = "none";
+  welcome.style.display = "none";
   startTimer();
   quiz.style.display = "block";
 }
@@ -41,127 +40,100 @@ function startTimer() {
       }
   }, 1000);
 };
-startTimer();
+
 // need  variable to tell computer when the game is out of questions, or MaxQuestions or something
 var lastQuestionIndex = quizQuestions.length - 1;
 //index for keeping track of what question user is currently answering
 var currentQuestionIndex = 0;
 
 
-
-
-function showResults(){}
-
-buildQuiz();
-// submit button to go to results screen
-submitButton.addEventListener('click', showResults);
-
-function buildQuiz(){
-//variable to hold questions and answers depending on quiz block
-var htmlOutput = [];
-
-
-//need functions for presenting the questions to the user, TOGGLE display:none
-
-function runQuestions() {
-  //the question
-  question.innerHTML =  "<p>" + quizQuestions[currentQuestionIndex]  + "</p>";
-  //the answer choices
-  choice1.innerHTML = quizQuestions[currentQuestionIndex].choice1;
-  choice2.innerHTML = quizQuestions[currentQuestionIndex].choice2;
-  choice3.innerHTML = quizQuestions[currentQuestionIndex].choice3;
-  choice4.innerHTML = quizQuestions[currentQuestionIndex].choice4;
-}
-console.log("WOWOWO");
-
-//need functions to tell computer to update score and time with each answer, and a caveat on the timer if the answer is wrong
-
-
-
-
-
-
-//need function to tell computer to end game if timer runs out or if user has answered all questions
-
-
-
-
-
-
-
-
-// setInterval(updateCountdown, 1000);
-
-// function updateCountdown() {
-//   if (timer <= startingSeconds) {
-//     countdownEl.innerHTML = timer;
-//     timer--;
-//   }else {
-//     count = 0;
-//     wrongAnswer();
-//     if (currentQuestionIndex < lastQuestionIndex) {
-//         currentQuestionIndex++;
-
-
-//     }
+// function runQuestion() {
+//   var q = question[currentQuestionIndex];
+//   questions.innerHTML ="<p>" + q.question + "</p>";
+  
+//   choice1.innerHTML = q.choice1;
+//   choice2.innerHTML = q.choice2;
+//   choice3.innerHTML = q.choice3;
+//   choice4.innerHTML = q.choice4;
 // }
-// }
+// welcome.style.display = "none";
+// runQuestion();
+// quiz.style.display = "block";
 
-// AN ARRAY FOR THE QUESTIONS AND ANSWERS
-var quizQuestions = [  
-  {
-    question: "Commonly used data types do NOT include:",
-    answers: {
-      1: "strings",
-      2: "booleans",
-      3: "alerts",
-      4: "numbers",
-    },
-    correctAnswer: "3"
-  },
-  {
-    question: "The condition in an if / else statement is enclosed in __________.",
-    answers: {
-      1: "quotes",
-      2: "curly brackets",
-      3: "parentheses",
-      4: "square brackets",
-    },
-    correctAnswer: "2"
-  },
-  {
-    question: "Arrays in JavaScript can be used to store __________.",
-    answers: {
-      1: "numbers and strings",
-      2: "other arrays",
-      3: "booleans",
-      4: "all of the above",
-    },
-    correctAnswer: "4"
-  },
-  {
-    question: "Who invented JavaScript?",
-    answers: {
-      1: "Theodore Mojava",
-      2: "Brandon Eich",
-      3: "Thomas Anderson",
-      4: "artificial intelligence",
-    },
-    correctAnswer: "2"
-  },
-  {
-    question: "String values must be enclosed within ___________ when being assigned to variables.",
-    answers: {
-      1: "commas",
-      2: "curly brackets",
-      3: "quotes",
-      4: "parentheses",
-    },
-    correctAnswer: "3"
-  }
-]
-
+//SCOREBOARD
+function showResults() {
+  quiz.style.display = "none";
+  results.style.display = "block";
 }
+
+
+
+// buildQuiz();
+// // submit button to go to results screen
+// submitButton.addEventListener('click', showResults);
+
+
+
+
+
+// // AN ARRAY FOR THE QUESTIONS AND ANSWERS
+// var questions = [  
+//   {
+//     question: "Commonly used data types do NOT include:",
+//     answers: {
+//       1: "strings",
+//       2: "booleans",
+//       3: "alerts",
+//       4: "numbers",
+//     },
+//     correctAnswer: "3"
+//   },
+//   {
+//     question: "The condition in an if / else statement is enclosed in __________.",
+//     answers: {
+//       1: "quotes",
+//       2: "curly brackets",
+//       3: "parentheses",
+//       4: "square brackets",
+//     },
+//     correctAnswer: "2"
+//   },
+//   {
+//     question: "Arrays in JavaScript can be used to store __________.",
+//     answers: {
+//       1: "numbers and strings",
+//       2: "other arrays",
+//       3: "booleans",
+//       4: "all of the above",
+//     },
+//     correctAnswer: "4"
+//   },
+//   {
+//     question: "Who invented JavaScript?",
+//     answers: {
+//       1: "Theodore Mojava",
+//       2: "Brandon Eich",
+//       3: "Thomas Anderson",
+//       4: "artificial intelligence",
+//     },
+//     correctAnswer: "2"
+//   },
+//   {
+//     question: "String values must be enclosed within ___________ when being assigned to variables.",
+//     answers: {
+//       1: "commas",
+//       2: "curly brackets",
+//       3: "quotes",
+//       4: "parentheses",
+//     },
+//     correctAnswer: "3"
+//   }
+// ]
+
+// function buildQuiz(){
+//   //variable to hold questions and answers depending on quiz block
+//   var htmlOutput = [];
+// }
 
 
 
