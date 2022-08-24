@@ -12,11 +12,11 @@ let questionIndex = 0;
 
 
 function showQuestions(questions, questionContainer) {
-  
+      //code TO BE (or not to be)
 }
 
 function showResults(question, questionContainer, resultsContainer) {
-  //code TO BE (or not to be)
+        //code TO BE (or not to be)
 }
 
 
@@ -38,7 +38,53 @@ function init() {
   showQuestions();
 }
 
-
+const questionsIndex = [  
+  {
+    question: "Commonly used data types do NOT include:",
+    answers: [
+      { text: "strings", correct: false },
+      { text: "booleans", correct: false },
+      { text: "alerts", correct: true },
+      { text: "numbers", correct: false },
+    ] 
+  },
+  {
+    question: "The condition in an if / else statement is enclosed in __________.",
+    answers: [
+      { text: "quotes", correct: false },
+      { text: "curly brackets", correct: true },
+      { text: "parentheses", correct: false },
+      { text: "square brackets", correct: false },
+    ]
+  },
+  {
+    question: "Arrays in JavaScript can be used to store __________.",
+    answers: [
+      { text: "numbers and strings", correct: false },
+      { text: "other arrays", correct: false },
+      { text: "booleans", correct: false },
+      { text: "all of the above", correct: true }
+    ]
+  },
+  {
+    question: "Who invented JavaScript?",
+    answers: [
+      { text: "Theodore Mojava", correct: false },
+      { text: "Brandon Eich", correct: true },
+      { text: "Mr. Anderson", correct: false },
+      { text: "artificial intelligence", correct: false },
+    ]
+  },  
+  {
+    question: "String values must be enclosed within ___________ when being assigned to variables.",
+    answers: [
+      {text: "commas", correct: false },
+      {text: "curly brackets", correct: false },
+      {text: "quotes", correct: true },
+      {text: "parentheses", correct: false },
+    ]
+  },
+]
 
 
 
