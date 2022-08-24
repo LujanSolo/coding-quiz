@@ -32,11 +32,33 @@ function buildQuiz(questions, questionContainer, resultsContainer, submitButton)
 }
 startButton.addEventListener("click", init);
 
+
+//START THE QUIZ
 function init() {
   document.querySelector("#welcome").style.display = "none";
   document.querySelector("#questionContainer").style.display = "block";
+  startTimer();
   showQuestions();
 }
+
+//TIMER
+let secondsRemaining = 60;
+const countdownEl = document.querySelector("#countdown");
+let timer;
+// TIMER FUNCTION
+function startTimer() {
+  countdownEl.textContent = secondsRemaining;
+  var timer = setInterval(
+    () => {
+      secondsRemaining--;
+      countdownEl.textContent = secondsRemaining;
+      if (secondsRemaining <= 0) {
+        clearInterval(timer);
+        endGame();
+      }
+  }, 1000);
+};
+console.log("hello")
 
 const questionsIndex = [  
   {
@@ -95,21 +117,21 @@ const questionsIndex = [
 
 // var userInitials = document.querySelector("#userInitials");
 
+ 
 
 
 
+// function renderQuestion() {
+//   var currentQuestion = questionsIndex[qIndex];
+//   questionsEl.innerText = currentQuestion.question;
+//   currentQuestion.answers.forEach(function(showAnswer, i){
+//     buttonEl.textContent = showAnswer;
+//     console.log(showAnswer);
+// })
+// }
+// function buttonTest() {
 
-function renderQuestion() {
-  var currentQuestion = questionsIndex[qIndex];
-  questionsEl.innerText = currentQuestion.question;
-  currentQuestion.answers.forEach(function(showAnswer, i){
-    buttonEl.textContent = showAnswer;
-    console.log(showAnswer);
-})
-}
-function buttonTest() {
-
-}
+// }
 
 
 
