@@ -6,35 +6,51 @@ const answerButtonsEl = document.querySelector("#answerButtons");
 let questionIndex = 0;
 
 
-var quiz = document.getElementById("quiz")
-var results = document.getElementById("results")
-var submitButton= document.getElementById("submitButton")
+// var quiz = document.getElementById("quiz")
+// var results = document.getElementById("results")
+// var submitButton= document.getElementById("submitButton")
 
 
+function showQuestions(questions, questionContainer) {
+  
+}
 
-var scoreContainer = document.getElementById("results")
-
-var userInitials = document.querySelector("#userInitials");
-
-var qIndex = 0;
-
-// AN ARRAY FOR THE QUESTIONS AND ANSWERS
-
-// START GAME FUNCTION
-start.addEventListener("click", startGame);
-
-function startGame(){
-  welcome.style.display = "none";
-  startTimer();
-  quiz.style.display = "block";
-  runningQuesiton = 0;
-  renderQuestion();
+function showResults(question, questionContainer, resultsContainer) {
+  //code TO BE (or not to be)
 }
 
 
-console.log('howdy')
+function buildQuiz(questions, questionContainer, resultsContainer, submitButton) {
+  
+  //show questions
+  showQuestions(questions,questionContainer);
 
-// var runningIndex = questionsIndex.length -1;
+  //when user submits initials, go to results page
+  submitButton.onclick = function(){
+    showResults(questions, questionContainer, resultsContainer);
+  }
+}
+startButton.addEventListener("click", init);
+
+function init() {
+  document.querySelector("#welcome").style.display = "none";
+  document.querySelector("#questionContainer").style.display = "block";
+  showQuestions();
+}
+
+
+
+
+
+
+
+
+// var scoreContainer = document.getElementById("results")
+
+// var userInitials = document.querySelector("#userInitials");
+
+
+
 
 
 function renderQuestion() {
