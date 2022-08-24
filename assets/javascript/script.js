@@ -89,7 +89,22 @@ var htmlOutput = [];
 var lastQuestionIndex = questions.length - 1;
 
 //index for keeping track of what question user is currently answering
-var runningQuestionIndex = 0;
+var currentQuestionIndex = 0;
+
+//need functions for presenting the questions to the user
+
+function runQuestions(){
+  
+}
+
+
+//need functions to tell computer to update score and time with each answer, and a caveat on the timer if the answer is wrong
+
+
+
+//need function to tell computer to end game if timer runs out or if user has answered all questions
+
+
 
 
 
