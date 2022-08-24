@@ -13,17 +13,26 @@ var choice4 = document.getElementById("4")
 
 //BUILD TIMER
 const startingSeconds = 60;
-var time = startingSeconds;
+var timer = 60;
+// var time = startingSeconds;
 
 var countdownEl = document.getElementById("countdown");
 
 setInterval(updateCountdown, 1000);
-
 function updateCountdown() {
-  var seconds = time % 60;
-  countdownEl.innerHTML = (seconds);
-  time--;
+  if (timer <= startingSeconds) {
+    countdownEl.innerHTML = timer;
+    timer--;
+  }
 }
+// function updateCountdown() {
+//   var seconds = time % 60;
+// //timer starts displaying at 0, hence this bit to adjust for that so it starts at 60
+//   seconds = seconds < 1 ? '6' + seconds : seconds;
+  
+//   countdownEl.innerHTML = (seconds);
+//   time--;
+// }
 
 
 var scoreContainer = getElementById("results")
