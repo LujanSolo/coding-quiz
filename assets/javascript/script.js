@@ -9,7 +9,17 @@ var choice2 = document.getElementById("2");
 var choice3 = document.getElementById("3");
 var choice4 = document.getElementById("4");
 
-var timer = document.getElementById("timer");
+
+
+//BUILD TIMER
+var time = 60;
+var countdown = document.getElementById("countdown");
+setInterval()
+function updateCountdown() {
+  var seconds = startTime % 60;
+  timerEl.innerHTML = (seconds);
+  time--;
+}
 
 var scoreContainer = getElementById("scoreContainer")
 //possible querySelectors:
