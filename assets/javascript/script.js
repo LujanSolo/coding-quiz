@@ -4,11 +4,16 @@ const questionContainerEl = document.querySelector("#questionContainer");
 const questionEl = document.querySelector("#questions");
 const answerButtonsEl = document.querySelector("#answerButtons");
 let questionIndex = 0;
+var secondsRemaining = 60;
+var penalty = 10;
+const countdownEl = document.querySelector("#countdown");
+var timer;
+var timerCount;
+var score = 0;
 
-
-// var quiz = document.getElementById("quiz")
-// var results = document.getElementById("results")
-// var submitButton= document.getElementById("submitButton")
+var quiz = document.getElementById("quiz")
+var results = document.getElementById("results")
+var submitButton= document.getElementById("submitButton")
 
 
 function buildQuiz(questions, questionContainer, resultsContainer, submitButton) {
@@ -24,7 +29,6 @@ function buildQuiz(questions, questionContainer, resultsContainer, submitButton)
 
 startButton.addEventListener("click", init);
 
-
 //START THE QUIZ
 function init() {
   document.querySelector("#welcome").style.display = "none";
@@ -33,11 +37,6 @@ function init() {
   showQuestions();
 };
 
-//TIMER
-let secondsRemaining = 60;
-const countdownEl = document.querySelector("#countdown");
-var timer;
-var timerCount;
 
 // TIMER FUNCTION
 function startTimer() {
@@ -125,12 +124,39 @@ function showQuestions(questions, questionContainer){
 
 function verifyAnswer(event) {
   console.log(event.target);
-  // if(event === true) {
+  if (event === true) {
+    score++;
+    createDiv.textContent = "Correct!";
+  } else { 
+    secondsRemaining = secondsRemaining - penalty;
+    createDiv.textContent = "Incorrect! The correct answer is: " + questions[questionIndex].answer;
+
+
+    questionsIndex++;
+// if true, add pseudoElement? to show "Correct!" at bottom of block
+
+  }
     
   }
 // }
 
+// counter.textContent = count;
 
+// addButton.addEventListener("click", function() {
+//   if (count < 24) {
+//     count++;
+//     counter.textContent = count;
+//     localStorage.setItem("count", count);
+//   }
+// });
+
+// subtractButton.addEventListener("click", function() {
+//   if (count > 0) {
+//     count--;
+//     counter.textContent = count;
+//     localStorage.setItem("count", count);
+//   }
+// });
 
   
   // comparing if it is correct or incorrect
