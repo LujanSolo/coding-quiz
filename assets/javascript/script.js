@@ -16,7 +16,6 @@ var quiz = document.getElementById("quiz")
 var results = document.getElementById("results")
 var submitButton= document.getElementById("submitButton")
 
-
 function buildQuiz(questions, questionContainer, resultsContainer, submitButton) {
   
   //show questions
@@ -110,10 +109,11 @@ var questionsIndex = [
 
 //a function to show each  QUESTION and each ANSWER CHOICE
 function showQuestions(questions, questionContainer){
-  //array for output, first ? to be replaced with next
+  
   var output = [];
   var answers;
   questionEl.innerText = questionsIndex[questionIndex].question;
+  answerButtonsEl.innerHTML = "";
   for(var i=0; i < questionsIndex[questionIndex].answers.length; i++) {
     var btn = document.createElement("button");
     btn.innerText = questionsIndex[questionIndex].answers[i].text;
@@ -125,138 +125,18 @@ function showQuestions(questions, questionContainer){
 
 function verifyAnswer(event) {
   console.log(event.target);
-  if (event === true) {
+    
+    if (event === true) {
     score++;
-    var correctDiv = document.createElement("div");
+    var correctDiv = document.querySelector("#test");
     correctDiv.innerText = "Correct!";
   } else { 
       secondsRemaining = secondsRemaining - penalty;
-      var incorrectDiv = document.createElement("div");
+      var incorrectDiv = document.querySelector("#test");
       incorrectDiv.innerText = "Incorrect! -10 seconds!"; 
   }
+  questionIndex ++;
+  showQuestions();
 };
-// }
-
-// counter.textContent = count;
-
-// addButton.addEventListener("click", function() {
-//   if (count < 24) {
-//     count++;
-//     counter.textContent = count;
-//     localStorage.setItem("count", count);
-//   }
-// });
-
-// subtractButton.addEventListener("click", function() {
-//   if (count > 0) {
-//     count--;
-//     counter.textContent = count;
-//     localStorage.setItem("count", count);
-//   }
-// });
-
-  
-  // comparing if it is correct or incorrect
-  // increasing quesiotnindex
-  // call showQuestions
-
-
-// function showResults(questions, questionContainer, resultsContainer){
-	
-// 	// gather answer containers from our quiz
-// 	var answerContainers = questionContainer.querySelectorAll('.answers');
-	
-// 	// keep track of user's answers
-// 	var userAnswer = '';
-// 	var numCorrect = 0;
-	
-// 	// for each question...
-// 	for(var i=0; i<questions.length; i++){
-
-// 		// find selected answer
-// 		userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
-		
-// 		// if answer is correct
-// 		if(userAnswer===questions[i].correctAnswer){
-// 			// add to the number of correct answers
-// 			numCorrect++;
-			
-// 			// color the answers green
-// 			answerContainers[i].style.color = 'lightgreen';
-// 		}
-// 		// if answer is wrong or blank
-// 		else{
-// 			// color the answers red
-// 			answerContainers[i].style.color = 'red';
-// 		}
-// 	}
-
-	// show number of correct answers out of total
-// 	resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
-// }
-
-
-
-
-
-// var scoreContainer = document.getElementById("results")
-
-// var userInitials = document.querySelector("#userInitials");
-
-
-// need  variable to tell computer when the game is out of questions, or MaxQuestions or something
-
-
-
-
-
-
-
-//SCOREBOARD
-// function showResults() {
-//   quiz.style.display = "none";
-//   results.style.display = "block";
-// }
-
-
-
-// buildQuiz();
-// // submit button to go to results screen
-// submitButton.addEventListener('click', showResults);
-
-
-
-
-
-
-// // function startTimer() {
-// //   // Sets timer
-// //   timer = setInterval(function() {
-// //     timerCount--;
-//     countdownEl.textContent = timerCount;
-//     if (timerCount >= 0) {
-//       // Tests if win condition is met
-//       if (isWin && timerCount > 0) {
-//         // Clears interval and stops timer
-//         clearInterval(timer);
-//         winGame();
-//       }
-//     }
-//     // Tests if time has run out
-//     if (timerCount === 0) {
-//       // Clears interval
-//       clearInterval(timer);
-//       loseGame();
-//     }
-//   }, 60000);
-// }
-
-
-
-
-
-
-
-
 
 
