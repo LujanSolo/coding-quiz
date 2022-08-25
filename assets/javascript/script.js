@@ -10,7 +10,8 @@ const countdownEl = document.querySelector("#countdown");
 var timer;
 var timerCount;
 var score = 0;
-
+var isWin = false;
+var isLoss = false;
 var quiz = document.getElementById("quiz")
 var results = document.getElementById("results")
 var submitButton= document.getElementById("submitButton")
@@ -53,13 +54,13 @@ function startTimer() {
   }
   if (secondsRemaining === 0) {
     clearInterval(timer);
-    loseGame();
+    isLoss = true;
   }
 }, 1000);
 };
 
 //MY QUESTIONS AND ANSWERS
-const questionsIndex = [  
+var questionsIndex = [  
   {
     question: "Commonly used data types do NOT include:",
     answers: [
@@ -126,18 +127,14 @@ function verifyAnswer(event) {
   console.log(event.target);
   if (event === true) {
     score++;
-    createDiv.textContent = "Correct!";
+    var correctDiv = document.createElement("div");
+    correctDiv.innerText = "Correct!";
   } else { 
-    secondsRemaining = secondsRemaining - penalty;
-    createDiv.textContent = "Incorrect! The correct answer is: " + questions[questionIndex].answer;
-
-
-    questionsIndex++;
-// if true, add pseudoElement? to show "Correct!" at bottom of block
-
+      secondsRemaining = secondsRemaining - penalty;
+      var incorrectDiv = document.createElement("div");
+      incorrectDiv.innerText = "Incorrect! -10 seconds!"; 
   }
-    
-  }
+};
 // }
 
 // counter.textContent = count;
