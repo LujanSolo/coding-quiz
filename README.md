@@ -9,6 +9,8 @@ https://github.com/LujanSolo/coding-quiz
 
 DEPLOYED SITE LINK:
 
+https://lujansolo.github.io/coding-quiz/
+
 A basic box quiz with multiple choice answers all centered around the topic of coding. The application pushes questions and answers directly from javaScript to the index.
 
 The coder's hope was to challenge their understanding of javaScript, proper function design, and workflow theories. 
