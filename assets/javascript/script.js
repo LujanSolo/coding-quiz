@@ -11,15 +11,6 @@ let questionIndex = 0;
 // var submitButton= document.getElementById("submitButton")
 
 
-function showQuestions(questions, questionContainer) {
-      //code TO BE (or not to be)
-}
-
-function showResults(question, questionContainer, resultsContainer) {
-        //code TO BE (or not to be)
-}
-
-
 function buildQuiz(questions, questionContainer, resultsContainer, submitButton) {
   
   //show questions
@@ -29,7 +20,8 @@ function buildQuiz(questions, questionContainer, resultsContainer, submitButton)
   submitButton.onclick = function(){
     showResults(questions, questionContainer, resultsContainer);
   }
-}
+};
+
 startButton.addEventListener("click", init);
 
 
@@ -39,12 +31,14 @@ function init() {
   document.querySelector("#questionContainer").style.display = "block";
   startTimer();
   showQuestions();
-}
+};
 
 //TIMER
 let secondsRemaining = 60;
 const countdownEl = document.querySelector("#countdown");
-let timer;
+var timer;
+var timerCount;
+
 // TIMER FUNCTION
 function startTimer() {
   countdownEl.textContent = secondsRemaining;
@@ -52,14 +46,20 @@ function startTimer() {
     () => {
       secondsRemaining--;
       countdownEl.textContent = secondsRemaining;
-      if (secondsRemaining <= 0) {
+      if (secondsRemaining >= 0) {
+        if(isWin && secondsRemaining > 0) {
         clearInterval(timer);
-        endGame();
+        winGame();
       }
-  }, 1000);
+  }
+  if (secondsRemaining === 0) {
+    clearInterval(timer);
+    loseGame();
+  }
+}, 1000);
 };
-console.log("hello")
 
+//MY QUESTIONS AND ANSWERS
 const questionsIndex = [  
   {
     question: "Commonly used data types do NOT include:",
@@ -106,7 +106,7 @@ const questionsIndex = [
       {text: "parentheses", correct: false },
     ]
   },
-]
+];
 
 //a function to show each  QUESTION and each ANSWER CHOICE
 function showQuestions(questions, questionContainer){
@@ -118,17 +118,60 @@ function showQuestions(questions, questionContainer){
     var btn = document.createElement("button");
     btn.innerText = questionsIndex[questionIndex].answers[i].text;
     btn.dataset.correct=questionsIndex[questionIndex].answers[i].correct;
-    btn.onclick = test;
+    btn.onclick = verifyAnswer;
     answerButtonsEl.appendChild(btn)
   }
-}
+};
 
-function test(event) {
+function verifyAnswer(event) {
   console.log(event.target);
+  // if(event === true) {
+    
+  }
+// }
+
+
+
+  
   // comparing if it is correct or incorrect
   // increasing quesiotnindex
   // call showQuestions
-}
+
+
+// function showResults(questions, questionContainer, resultsContainer){
+	
+// 	// gather answer containers from our quiz
+// 	var answerContainers = questionContainer.querySelectorAll('.answers');
+	
+// 	// keep track of user's answers
+// 	var userAnswer = '';
+// 	var numCorrect = 0;
+	
+// 	// for each question...
+// 	for(var i=0; i<questions.length; i++){
+
+// 		// find selected answer
+// 		userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+		
+// 		// if answer is correct
+// 		if(userAnswer===questions[i].correctAnswer){
+// 			// add to the number of correct answers
+// 			numCorrect++;
+			
+// 			// color the answers green
+// 			answerContainers[i].style.color = 'lightgreen';
+// 		}
+// 		// if answer is wrong or blank
+// 		else{
+// 			// color the answers red
+// 			answerContainers[i].style.color = 'red';
+// 		}
+// 	}
+
+	// show number of correct answers out of total
+// 	resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+// }
+
 
 
 
@@ -136,23 +179,6 @@ function test(event) {
 // var scoreContainer = document.getElementById("results")
 
 // var userInitials = document.querySelector("#userInitials");
-
- 
-
-
-
-// function renderQuestion() {
-//   var currentQuestion = questionsIndex[qIndex];
-//   questionsEl.innerText = currentQuestion.question;
-//   currentQuestion.answers.forEach(function(showAnswer, i){
-//     buttonEl.textContent = showAnswer;
-//     console.log(showAnswer);
-// })
-// }
-// function buttonTest() {
-
-// }
-
 
 
 // need  variable to tell computer when the game is out of questions, or MaxQuestions or something
@@ -162,18 +188,6 @@ function test(event) {
 
 
 
-// function runQuestion() {
-//   var q = question[currentQuestion];
-//   questions.innerHTML ="<p>" + q.question + "</p>";
-  
-//   choice1.innerHTML = q.choice1;
-//   choice2.innerHTML = q.choice2;
-//   choice3.innerHTML = q.choice3;
-//   choice4.innerHTML = q.choice4;
-// }
-// welcome.style.display = "none";
-// runQuestion();
-// quiz.style.display = "block";
 
 //SCOREBOARD
 // function showResults() {
@@ -190,6 +204,29 @@ function test(event) {
 
 
 
+
+
+// // function startTimer() {
+// //   // Sets timer
+// //   timer = setInterval(function() {
+// //     timerCount--;
+//     countdownEl.textContent = timerCount;
+//     if (timerCount >= 0) {
+//       // Tests if win condition is met
+//       if (isWin && timerCount > 0) {
+//         // Clears interval and stops timer
+//         clearInterval(timer);
+//         winGame();
+//       }
+//     }
+//     // Tests if time has run out
+//     if (timerCount === 0) {
+//       // Clears interval
+//       clearInterval(timer);
+//       loseGame();
+//     }
+//   }, 60000);
+// }
 
 
 
