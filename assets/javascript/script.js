@@ -126,7 +126,7 @@ function showQuestions(questions, questionContainer){
 function verifyAnswer(event) {
   console.log(event.target);
     
-    if (event === true) {
+    if (event.currentTarget.dataset.correct === "true") {
     score++;
     var correctDiv = document.querySelector("#test");
     correctDiv.innerText = "Correct!";
